@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #aa0000;
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.searching {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 44px;
+    border-radius: 30rem;
+    overflow: hidden;
+}
+
+.searching input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.1rem;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    left: 0;
+    bottom: -10px;
+    transform-origin: left;
+    background: #fff;
+    transition: .5s ease;
+    transform: scale(0);
+}
+
+.links a:hover::after {
+    transform: scale(1);
+}
+
+.btn {
+    display: flex;
+    gap: 20px;
+}
+
+.sign-in, .sign-up {
+    width: 110px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.sign-in {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+.sign-in:hover, .sign-up:hover {
+    padding-left: 20px;
+}
+
+.left, .right {
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.left .intro {
+    display: grid;
+    gap: 20px;
+}
+
+.intro h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 5rem;
+    text-shadow: 0 0 10px #333, 0 0 20px #333, 0 0 40px #333, 0 0 80px #333;
+}
+
+.intro p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.get {
+    width: 150px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.get:hover {
+    padding-left: 20px;
+}
+
+.le1{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 100px auto;
+}
+.le1  .lesson1{
+    width: 100%;
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #08525f;
+    box-shadow: 0 4px 20px #333;
+    transition: .5s ease;
+}
+
+.le1 .lesson1:hover {
+    transform: translateY(-10px);
+}
+
+.le1 .lesson1 .sawir1{
+    width: 100%;
+    height: 70%;
+}
+
+.le1 .lesson1 .sawir1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.le1 .lesson1 h1{
+    color: #DBE2EF;
+    font-size: 24px;
+}
+.le1 .lesson1 .btns1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.time{
+    width: 60px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+@media (max-width: 1000px) {
+    .page {
+        display: grid;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    .links {
+        display: none;
+    }
+    .le1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .btn {
+        display: grid;
+        gap: 10px;
+    }
+    .left, .right {
+        display: grid;
+        justify-content: start;
+        align-items: center;
+    }
+    .intro {
+        margin-left: 40px;
+    }
+    .intro h2 {
+        font-size: 4rem;
+    }
+    .le1 {
+        grid-template-columns: 1fr;
+    }
+}
