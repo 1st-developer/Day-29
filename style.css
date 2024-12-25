@@ -5,6 +5,10 @@
     font-family: sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .page {
     position: relative;
     width: 100%;
